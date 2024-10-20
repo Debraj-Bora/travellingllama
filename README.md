@@ -2,11 +2,13 @@
 
 <img src="img/Frame 13.png" width=100%>
 
-## Travelling Llama 🦙:
+## Wander Llama 🦙:
 
 <p align="justify">
 
 <b>Theme </b>: AI on Edge - Develop AI solutions optimised for edge devices, ensuring real-time processing without cloud reliance.
+
+Team Name: Travelling Llama
 </p>
 
 ### Problem:
@@ -19,13 +21,15 @@ Travelers in remote areas, such as hikers, or people living in regions with limi
 
 <p align="justify">
 Travelling Llama is an offline, edge-powered travel companion app that provides personalized travel recommendations and real-time information about everything within a 10 km radius of a geolocation, even in areas without internet access. By using Meta’s Llama 3.2 model, optimized for edge devices, the app offers localized route suggestions, locality information from locals, weather forecasts, cultural insights, and safety alerts tailored to individual user preferences. It operates entirely offline, ensuring data privacy through on-device processing. This solution is perfect for hikers, people living in remote areas, and regions affected by natural disasters.
+</p>
 
+<p align="justify">
 We have implemented a Retrieval-Augmented Generation (RAG) pipeline to extract information specific to (example remote location) Golaghat, Assam, allowing us to generate insights beyond the inherent capabilities of the Llama 3.2 1B model. To achieve this, we created a custom GeoJSON dataset for the region and utilized it as contextual input for the model. Additionally, we employed techniques such as Retrieval Question Answering (RetrievalQA) to obtain answers that were otherwise unavailable, thereby enhancing our data retrieval and generation capabilities.
 </p>
 
 <p align="justify">
 
-`Key Technologies`: Python, JavaScript, Streamlit, PyTorch, OpenWeatherMap API (offline storage), Geopandas, OpenStreetMap.
+`Key Technologies`: Python, JavaScript, Streamlit, PyTorch, OpenWeatherMap API (weather), Geopandas, OpenStreetMap, Scraping via Selenium, BeautifulSoup4.
 
 `RAG Pipeline`: Langchain, ChromaDb, ChatOllama(model=llama3.2:1b), OllamaEmbedings(nomic-embed-text), Geojson
 
@@ -36,18 +40,18 @@ We have implemented a Retrieval-Augmented Generation (RAG) pipeline to extract i
 
 ### Target Audience:
 
-+ `Hikers and Travelers in Remote Areas`: Ideal for those needing travel information within a 10 km radius in regions without internet connectivity.
++ `Hikers and Travelers in Remote Areas`: Ideal for those needing travel information with chat interface within a 10 km radius in regions without internet connectivity.
 + `People Living in Remote Areas`: Provides real-time local information for individuals in places with unreliable or no internet access.
 + `Regions Affected by Natural Disasters`: Delivers essential real-time information, weather alerts, and safety updates when internet services are disrupted due to calamities.
 
 
 ### Benefits:
 
-+ `Increased Safety`: Real-time weather alerts and route suggestions within a 10 km radius, ensuring safer travel decisions, even in hazardous or remote areas.
++ `Increased Safety`: Real-time route suggestions, local information and weather alerts within a 10 km radius, ensuring safer travel decisions, even in hazardous or remote areas.
 + `Enhanced Privacy`: Data remains on the device, protecting user privacy while enabling personalized recommendations and learning without cloud processing.
 + `Uninterrupted Service`: Functions offline, making it ideal for travel in areas without internet access or during natural disasters when communication infrastructure is compromised.
 + `Scalability & Future Plans`:
-Travelling Llama can be expanded to support more languages, additional edge devices (e.g., wearables, smart cars), and future features such as AR-based navigation for offline route exploration and real-time IoT-based environmental data.
+Travelling Llama can be expanded to additional edge devices (e.g., wearables, smart cars, smart senors and iot systems), and future features such as AR-based navigation for offline route exploration and real-time IoT-based environmental data.
 
 <p align="justify">
 
@@ -60,13 +64,15 @@ Travelling Llama can be expanded to support more languages, additional edge devi
 To implement the solution using Meta’s Llama 3.2 1-bit model with 1 billion parameters, we integrate Retrieval-Augmented Generation (RAG) to handle custom queries, improve the personalization of responses, and create an offline travel assistant. 
 </p>
 
-`Responses from Llama 3.2 1 bit model via ollama` (without RAG):
+CODE : Llama 3.2 ~ 1 bit [ [without_RAG](./without_rag/), [with_RAG](./with_rag/) ]
+
+`Responses from Llama 3.2 1 bit model via ollama` (without RAG): [[without_rag.ipynb](./without_rag/without_rag.ipynb)]
 
 <img src="img/ollama.png" width=100%>
 
 <img src="img/image (8) (1).png" width=100%>
 
-`Responses from Llama 3.2 1 bit model via ollama` (with RAG):
+`Responses from Llama 3.2 1 bit model via ollama` (with RAG): [[rag_pipeline.ipynb](./with_rag/rag_pipeline.ipynb)]
 
 <img src="img/image (5) (1).png" width=100%>
 
@@ -80,6 +86,10 @@ To implement the solution using Meta’s Llama 3.2 1-bit model with 1 billion pa
 </>  
 
 [ Streamlit application : [sapp.py](./sapp.py) ~ to scrape GeoJSON data from 10km radius around a geolocation. Users can use our app to download custom geo location data with landmark information, latitude, longitude of public institutes, hotel information and road network information; Tech Stack : Langchain, ChatGroq(Model=llama-3.1-70b-versatile), streamlit  ]
+
+```python
+    $ streamlit run sapp.py
+```
 
 Scraped data from OpenStreetMap : [ [map_data.geojson](./map_data.geojson), [map_data_all.geojson](./map_data_all.geojson) ]
 
@@ -121,4 +131,10 @@ Interface to Scrape GeoJSON data from OpenStreetMap:
 Here is a visualization of data scraped from OpenStreetMap with 10km radius of a geolocation ([map_data_all.geojson](./map_data_all.geojson)):
 
 <img src="img/osm.png" width=100%>
+
+Custom Datasets:
+
++ Incorporating satellite data 🛰️, particularly Synthetic Aperture Radar (SAR) data, into our Llama model with Retrieval-Augmented Generation (RAG) can significantly enhance the system’s capabilities for providing real-time alerts and localized information for outdoor activities like hiking. This approach allows us to create a robust, custom dataset that facilitates the generation of geo-relevant alerts, such as flood warnings, and enriches the geographical context with details about hiking trails, forest areas, and more.
+
++ Creating a custom dataset for the Llama model through the Retrieval-Augmented Generation (RAG) approach from a local’s perspective offers a unique opportunity to harness community knowledge and localized data. This strategy not only enhances the accuracy of responses but also ensures that the information provided is relevant, culturally sensitive, and grounded in the real experiences of the local population.
 
