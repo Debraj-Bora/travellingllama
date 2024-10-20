@@ -1,5 +1,7 @@
 # AI Hackathon with Meta Llama 🦙
 
+<img src="img/Frame 13.png" width=100%>
+
 ## Travelling Llama 🦙:
 
 <p align="justify">
@@ -17,11 +19,15 @@ Travelers in remote areas, such as hikers, or people living in regions with limi
 
 <p align="justify">
 Travelling Llama is an offline, edge-powered travel companion app that provides personalized travel recommendations and real-time information about everything within a 10 km radius of a geolocation, even in areas without internet access. By using Meta’s Llama 3.2 model, optimized for edge devices, the app offers localized route suggestions, locality information from locals, weather forecasts, cultural insights, and safety alerts tailored to individual user preferences. It operates entirely offline, ensuring data privacy through on-device processing. This solution is perfect for hikers, people living in remote areas, and regions affected by natural disasters.
+
+We have implemented a Retrieval-Augmented Generation (RAG) pipeline to extract information specific to (example remote location) Golaghat, Assam, allowing us to generate insights beyond the inherent capabilities of the Llama 3.2 1B model. To achieve this, we created a custom GeoJSON dataset for the region and utilized it as contextual input for the model. Additionally, we employed techniques such as Retrieval Question Answering (RetrievalQA) to obtain answers that were otherwise unavailable, thereby enhancing our data retrieval and generation capabilities.
 </p>
 
 <p align="justify">
 
-<b>Key Technologies</b>: Python, JavaScript, Streamlit, PyTorch,  TensorFlow Lite, OpenWeatherMap API (offline storage), Geopandas, OpenStreetMap.
+`Key Technologies`: Python, JavaScript, Streamlit, PyTorch, OpenWeatherMap API (offline storage), Geopandas, OpenStreetMap.
+
+`RAG Pipeline`: Langchain, ChromaDb, ChatOllama(model=llama3.2:1b), OllamaEmbedings(nomic-embed-text), Geojson
 
 </p>
 
@@ -30,9 +36,9 @@ Travelling Llama is an offline, edge-powered travel companion app that provides 
 
 ### Target Audience:
 
-+ Hikers and Travelers in Remote Areas: Ideal for those needing travel information within a 10 km radius in regions without internet connectivity.
-+ People Living in Remote Areas: Provides real-time local information for individuals in places with unreliable or no internet access.
-+ Regions Affected by Natural Disasters: Delivers essential real-time information, weather alerts, and safety updates when internet services are disrupted due to calamities.
++ `Hikers and Travelers in Remote Areas`: Ideal for those needing travel information within a 10 km radius in regions without internet connectivity.
++ `People Living in Remote Areas`: Provides real-time local information for individuals in places with unreliable or no internet access.
++ `Regions Affected by Natural Disasters`: Delivers essential real-time information, weather alerts, and safety updates when internet services are disrupted due to calamities.
 
 
 ### Benefits:
@@ -44,6 +50,7 @@ Travelling Llama is an offline, edge-powered travel companion app that provides 
 Travelling Llama can be expanded to support more languages, additional edge devices (e.g., wearables, smart cars), and future features such as AR-based navigation for offline route exploration and real-time IoT-based environmental data.
 
 <p align="justify">
+
 `Travelling Llama` offers a groundbreaking travel assistance experience, providing real-time, personalized information within a 10 km radius, even without internet connectivity. By leveraging AI on the edge, it ensures privacy, safety, and accessibility, making it indispensable for travelers, residents of remote areas, and those affected by natural disasters.
 </p>
 
