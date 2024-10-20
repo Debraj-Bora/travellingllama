@@ -13,7 +13,7 @@
 Team Name: Travelling Llama
 </p>
 
-### Problem:
+### Problem [[pdf](./Travelling%20Llama.pdf)]:
 
 <p align="justify">
 Travelers in remote areas, such as hikers, or people living in regions with limited or no regular internet connectivity, often struggle to access real-time travel information like route suggestions, locality information from locals, weather updates, or local cultural knowledge. This issue is even more critical during natural disasters, when internet infrastructure may fail entirely, leaving people without access to vital information. Traditional travel apps, which depend on cloud services, become unusable without a stable internet connection and may compromise user privacy.
@@ -67,18 +67,18 @@ Travelling Llama can be expanded to additional edge devices (e.g., wearables, sm
 ## Implementation : Travelling Llama - Edge AI Travel Companion Using Llama 3.2 with RAG
 
 <p align="justify">
-To implement the solution using Meta’s Llama 3.2 1-bit model with 1 billion parameters, we integrate Retrieval-Augmented Generation (RAG) to handle custom queries, improve the personalization of responses, and create an offline travel assistant. 
+To implement the solution using Meta’s Llama 3.2 1-B model with 1 billion parameters, we integrate Retrieval-Augmented Generation (RAG) to handle custom queries, improve the personalization of responses, and create an offline travel assistant. 
 </p>
 
-CODE : Llama 3.2 ~ 1 bit [ [without_RAG](./without_rag/), [with_RAG](./with_rag/) ]
+CODE : Llama 3.2 ~ 1 B [ [without_RAG](./without_rag/), [with_RAG](./with_rag/) ]
 
-`Responses from Llama 3.2 1 bit model via ollama` (without RAG): [[without_rag.ipynb](./without_rag/without_rag.ipynb)]
+`Responses from Llama 3.2 1 B model via ollama` (without RAG): [[without_rag.ipynb](./without_rag/without_rag.ipynb)]
 
 <img src="img/ollama.png" width=100%>
 
 <img src="img/image (8) (1).png" width=100%>
 
-`Responses from Llama 3.2 1 bit model via ollama` (with RAG): [[rag_pipeline.ipynb](./with_rag/rag_pipeline.ipynb)]
+`Responses from Llama 3.2 1 B model via ollama` (with RAG): [[rag_pipeline.ipynb](./with_rag/rag_pipeline.ipynb)]
 
 <img src="img/image (5) (1).png" width=100%>
 
@@ -147,6 +147,6 @@ Custom Datasets:
 
 Future Scope:
 
-+ Distillation in 1 bit Llama model with RAG :
++ Distillation in 1 B Llama model with RAG to go to 1 bit :
 
 <img src="img/distillation.png" width=100%>
