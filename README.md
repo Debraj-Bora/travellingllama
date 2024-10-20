@@ -144,3 +144,9 @@ Custom Datasets:
 
 + For the Llama model, a custom dataset was created to implement the RAG approach. It helps to look at the location from a local's perspective and offers a unique opportunity to harness community knowledge and localized data. This custom dataset not only enhances the accuracy of responses but also ensures that the information provided is relevant, culturally sensitive, and grounded in the real experiences of the local population.
 
+
+Future Scope:
+
++ Distillation in 1 bit Llama model with RAG :
+
+<img src="img/distillation.png" width=100%>

@@ -38,7 +38,7 @@ prompt = ChatPromptTemplate.from_template(template)
 
 def get_response(user_query, chat_history):
     llm = ChatGroq(
-        groq_api_key="#",
+        groq_api_key="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",
         model="llama-3.1-70b-versatile",
         temperature=0,
         streaming=True
