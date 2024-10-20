@@ -53,6 +53,8 @@ We have implemented a Retrieval-Augmented Generation (RAG) pipeline to extract i
 + `Scalability & Future Plans`:
 Travelling Llama can be expanded to additional edge devices (e.g., wearables, smart cars, smart senors and iot systems), and future features such as AR-based navigation for offline route exploration and real-time IoT-based environmental data.
 
+<img src="img/hindi.png" width=100%>
+
 <p align="justify">
 
 `Travelling Llama` offers a groundbreaking travel assistance experience, providing real-time, personalized information within a 10 km radius, even without internet connectivity. By leveraging AI on the edge, it ensures privacy, safety, and accessibility, making it indispensable for travelers, residents of remote areas, and those affected by natural disasters.
@@ -136,5 +138,5 @@ Custom Datasets:
 
 + Incorporating satellite data 🛰️, particularly Synthetic Aperture Radar (SAR) data, into our Llama model with Retrieval-Augmented Generation (RAG) can significantly enhance the system’s capabilities for providing real-time alerts and localized information for outdoor activities like hiking. This approach allows us to create a robust, custom dataset that facilitates the generation of geo-relevant alerts, such as flood warnings, and enriches the geographical context with details about hiking trails, forest areas, and more.
 
-+ Creating a custom dataset for the Llama model through the Retrieval-Augmented Generation (RAG) approach from a local’s perspective offers a unique opportunity to harness community knowledge and localized data. This strategy not only enhances the accuracy of responses but also ensures that the information provided is relevant, culturally sensitive, and grounded in the real experiences of the local population.
++ For the Llama model, a custom dataset was created to implement the RAG approach. It helps to look at the location from a local's perspective and offers a unique opportunity to harness community knowledge and localized data. This custom dataset not only enhances the accuracy of responses but also ensures that the information provided is relevant, culturally sensitive, and grounded in the real experiences of the local population.
 
