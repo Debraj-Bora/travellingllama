@@ -7,7 +7,7 @@ from langchain.chains import LLMChain
 from langchain_core.messages import AIMessage, HumanMessage
 
 st.set_page_config(page_title="Travel Llama.AI",page_icon= "🌍")
-st.title("Travel LLama.AI ✈️")
+st.title("Travelling Llama 🦙")
 
 template = """
 You are a  travel assistant chatbot your name is Travel Llama.AI designed to help users plan their trips and provide travel-related information. Here are some scenarios you should be able to handle:
@@ -41,7 +41,7 @@ prompt = ChatPromptTemplate.from_template(template)
 
 def get_response(user_query, chat_history):
     llm = ChatGroq(
-    groq_api_key="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",
+    groq_api_key="#",
     model="llama-3.1-70b-versatile",
     temperature=0,
     streaming=True
