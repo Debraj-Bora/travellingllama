@@ -53,12 +53,26 @@ Travelling Llama can be expanded to support more languages, additional edge devi
 To implement the solution using Meta’s Llama 3.2 1-bit model with 1 billion parameters, we integrate Retrieval-Augmented Generation (RAG) to handle custom queries, improve the personalization of responses, and create an offline travel assistant. 
 </p>
 
+`Responses from Llama 3.2 1 bit model via ollama` (without RAG):
+
+<img src="img/ollama.png" width=100%>
+
+<img src="img/image (8) (1).png" width=100%>
+
+`Responses from Llama 3.2 1 bit model via ollama` (with RAG):
+
+<img src="img/image (5) (1).png" width=100%>
+
+<img src="img/image (6) (1).png" width=100%>
+
+<img src="img/image (7) (1).png" width=100%>
+
 
 ## Data Scraping:
 
 </>  
 
-[ Streamlit application : [sapp.py](./sapp.py) ~ to scrape GeoJSON data from 10km radius around a geolocation. Users can use our app to download custom geo location data with landmark information, latitude, longitude of public institutes, hotel information and road network information  ]
+[ Streamlit application : [sapp.py](./sapp.py) ~ to scrape GeoJSON data from 10km radius around a geolocation. Users can use our app to download custom geo location data with landmark information, latitude, longitude of public institutes, hotel information and road network information; Tech Stack : Langchain, ChatGroq(Model=llama-3.1-70b-versatile), streamlit  ]
 
 Scraped data from OpenStreetMap : [ [map_data.geojson](./map_data.geojson), [map_data_all.geojson](./map_data_all.geojson) ]
 
@@ -91,8 +105,13 @@ Scraped data from OpenStreetMap : [ [map_data.geojson](./map_data.geojson), [map
                 ]
             }
 ```
+Interface to Scrape GeoJSON data from OpenStreetMap:
 
 <img src="img/streamlit.png" width=100%>
+
+[ [scrape_wiki.py](./scrape_wiki.py) ~ Scrape data from Wikipedia ~ data : [golaghat_full_wikipedia_data.json](./golaghat_full_wikipedia_data.json) ] [ [weather.py](./weather.py) ~ Scrape live weather data from OpenWeatherMap ~ data : [realtime_weather.json](./realtime_weather.json) ] [ [tripadvisor.py](./tripadvisor.py) ~ scrape article data ]
+
+Here is a visualization of data scraped from OpenStreetMap with 10km radius of a geolocation ([map_data_all.geojson](./map_data_all.geojson)):
 
 <img src="img/osm.png" width=100%>
 

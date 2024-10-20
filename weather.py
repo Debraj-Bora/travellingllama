@@ -8,7 +8,7 @@ api_key = "your_api_key"
 location = "Golaghat,IN"
 
 # URL for OpenWeatherMap API (Current Weather Data)
-url = f"https://api.openweathermap.org/data/2.5/weather?q=Golaghat&units=metric&appid=99b9922597ba486ef77f40305e0beab6"  # Metric for Celsius
+url = f"https://api.openweathermap.org/data/2.5/weather?q=Golaghat&units=metric&appid=API"  # Metric for Celsius
 
 # Send a GET request to fetch data
 response = requests.get(url)
