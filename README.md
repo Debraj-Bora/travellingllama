@@ -2,7 +2,7 @@
 
 <img src="img/Frame 13.png" width=100%>
 
-<img src="img/GaYSMpfWoAAlFdA.jpg" width=63.5%> <img src="img/GaYSMpgWsAAI2JO.jpg" width=36%>
+<img src="img/GaYSMpfWoAAlFdA.jpg" width=63%> <img src="img/GaYSMpgWsAAI2JO.jpg" width=36%>
 
 ## Wander Llama 🦙:
 
