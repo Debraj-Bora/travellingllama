@@ -2,6 +2,8 @@
 
 <img src="img/Frame 13.png" width=100%>
 
+<img src="img/GaYSMpfWoAAlFdA.jpg" width=62%> <img src="img/GaYSMpgWsAAI2JO.jpg" width=36%>
+
 ## Wander Llama 🦙:
 
 <img src="img/Slide 16_9 - 1.png" width=100%>
@@ -89,7 +91,7 @@ CODE : Llama 3.2 ~ 1 B [ [without_RAG](./without_rag/), [with_RAG](./with_rag/) 
 
 ## Data Scraping:
 
-</>  
+</img>  
 
 [ Streamlit application : [sapp.py](./sapp.py) ~ to scrape GeoJSON data from 10km radius around a geolocation. Users can use our app to download custom geo location data with landmark information, latitude, longitude of public institutes, hotel information and road network information; Tech Stack : Langchain, ChatGroq(Model=llama-3.1-70b-versatile), streamlit  ]
 
